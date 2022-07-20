@@ -1,0 +1,103 @@
+@media screen and (min-width: 0) {
+    .destaques__principal{
+        grid-column: 1/5;
+        grid-row: 1/3;   /*nao precisa colocar o grid-row: 1/3 pq esta repetindo
+         la no destaques.css na classe destaques__principal */
+    }
+
+    .destaques__secundario:nth-child(2){
+        display: none;
+        grid-column: none;
+        grid-row: none;
+    }
+    .destaques__secundario:nth-child(3){
+        display: none;
+        grid-column: none;
+        grid-row: none;
+    }
+    .destaques__secundario:nth-child(4){
+        display: none;
+        grid-column: none;
+        grid-row: none;
+    }
+    .destaques__secundario:nth-child(5){
+        display: none;
+        grid-column: none;
+        grid-row: none;
+    }
+
+    .destaques__categorias{
+        grid-column: 1/5;
+    }
+
+    /* PARTE DOS CARDS */
+
+    .populares__conteudo{
+        flex-direction: column;  /* usado para deixar um card abaixo do outro e não em linha como estava */
+    }
+
+    .populares__card{
+        grid-template-rows: 200px auto;
+        width: 100%;
+        margin-bottom:3rem; /*  separa um card do outro */
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .destaques__principal{
+        grid-column: 1/4;
+         
+    }
+
+    .destaques__secundario:nth-child(2){
+        display: flex;
+        grid-column: 4/4;
+        grid-row: 1/1;
+    }
+    .destaques__secundario:nth-child(3){
+        display: flex;
+        grid-column: 4/4;
+        grid-row: 2/2;
+    }
+    .destaques__secundario:nth-child(4){
+        display: flex;
+        grid-column: 4/4;
+        grid-row: 3/3;
+    }
+    .destaques__secundario:nth-child(5){
+        display: flex;
+        grid-column: 3/3;
+        grid-row: 3/3;
+    }
+
+    .destaques__categorias{
+        grid-column: 1/3;;
+    }
+
+    .populares__conteudo{
+        flex-direction: row;
+    }
+
+    .populares__card{
+        grid-template-rows: 173px auto;
+        width: calc(50% - 1rem); /*  separa um card do outro */
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .populares__card{
+        width: calc(33.33% - 1rem);
+        margin-bottom:3rem; /*  separa um card do outro */
+        
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .populares__card{
+        margin-bottom: 0;
+        width: calc(20% - 1rem);
+    }
+}
